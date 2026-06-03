@@ -1,8 +1,8 @@
 # PRD - Frank (Product Requirements Document)
 
-**Versão:** 1.0  
+**Versão:** 1.1  
 **Data:** 03/06/2026  
-**Status:** Em produção (fases 1-6 concluídas)  
+**Status:** Em produção (fases 1-6 concluídas, migração Vercel concluída)  
 **Plataforma:** Web SPA (Single Page Application)  
 **Idioma:** Português (pt-BR)  
 **Fuso horário base:** Brasília (UTC-3)  
@@ -130,8 +130,10 @@ Dirigido a equipes brasileiras de pequeno e médio porte (5-100 membros), startu
 
 | Camada | Tecnologia |
 |--------|-----------|
-| **Hosting** | Readdy.ai (deploy automático) |
-| **CDN** | Readdy.ai CDN |
+| **Hosting** | Vercel (deploy automático a cada push na branch main) |
+| **CDN** | Vercel CDN |
+| **URL de produção** | https://meufrank.vercel.app |
+| **Repositório** | https://github.com/dosagezen/frank |
 | **Edge Functions** | Supabase Functions (Deno) |
 | **Storage** | Supabase Storage (arquivos de projeto) |
 | **Auth** | Supabase Auth (JWT + PKCE) |
@@ -856,6 +858,97 @@ conhecimento-list
 | Acessar admin | Sim | Não | Não | Não |
 
 \* Se membro do projeto público
+
+---
+
+## 17. Features
+
+### Fases 1–6 (Concluídas) ✅
+✅ Setup do projeto (React + Vite + Tailwind + TypeScript)
+✅ Configuração Supabase (Auth, DB, RLS)
+✅ Sistema de autenticação (login, cadastro, recuperação de senha)
+✅ Landing page (Home)
+✅ Layout base com Sidebar e Header
+✅ CRUD de Projetos (com relacionamentos completos)
+✅ CRUD de Tarefas (com subtarefas e comentários)
+✅ Kanban view (pipeline de status)
+✅ Dashboard / Painel com widgets
+✅ Sistema de notificações (in-app, email, realtime)
+✅ Gerenciamento de Equipe (perfis, roles, aprovação)
+✅ Calendário multi-view (mês, semana, dia)
+✅ Gantt view
+✅ Drag & drop no calendário
+✅ Recorrência de eventos e tarefas
+✅ Base de Conhecimento (CRUD, tags, busca, contador de views)
+✅ Módulo de Arquivos (upload, download, filtros por tipo)
+✅ Relatórios e dashboards analíticos
+✅ Gráficos de produtividade e burndown de sprint
+✅ Ranking de equipe
+✅ Sistema de cache (IndexedDB + SWR)
+✅ Lazy loading de todas as páginas
+✅ Realtime sync para invalidação automática de cache
+✅ Edge Functions (email, notificações, auth)
+✅ Otimização de queries (JOINs, batch, safeFetch)
+✅ Dark mode completo
+✅ Responsividade mobile
+✅ Sistema de busca global
+✅ Timezone-safe dates
+✅ Página Admin (gerenciamento de usuários, roles, aprovação, deleção completa)
+✅ Sistema de aprovação de novos usuários com email de boas-vindas
+✅ Log de atividades de projetos (project_activity_log)
+✅ Sprints com CRUD, membros, status e ordenação
+✅ Etapas Kanban de projetos (backlog → MVP)
+✅ Contatos de setor nos projetos
+✅ Entregáveis e links por projeto
+
+### Migração de Infraestrutura ✅
+✅ Repositório criado no GitHub (dosagezen/frank) — 03/06/2026
+✅ Deploy configurado na Vercel (meufrank.vercel.app) — 03/06/2026
+✅ Supabase conectado à nova URL da Vercel — 03/06/2026
+✅ SPA routing configurado via vercel.json — 03/06/2026
+✅ Variáveis de ambiente configuradas na Vercel — 03/06/2026
+✅ Colaborador marciodesena adicionado ao repositório — 03/06/2026
+
+### Fase 7 — Escalabilidade (Futuro)
+( ) WebSocket para colaboração em tempo real nas tarefas
+( ) Sistema de tags e categorias avançado
+( ) Integração com GitHub / GitLab
+( ) Integração com Slack
+( ) Exportação de relatórios (PDF, Excel)
+( ) API REST pública
+( ) Mobile app (React Native)
+( ) Sistema de assinaturas (Stripe)
+( ) Multi-workspace (multi-tenancy)
+( ) Autenticação SSO (Google, Microsoft)
+
+### Fase 8 — Enterprise (Futuro)
+( ) SAML SSO
+( ) Audit logs completo
+( ) RBAC granular (permissões customizadas por role)
+( ) SLA monitoring
+( ) Backup automático
+( ) On-premise deployment
+
+### Novas Features (adicionadas durante o desenvolvimento)
+( ) [novas features serão listadas aqui conforme forem surgindo]
+
+---
+
+## 18. Regra de Atualização do PRD
+
+Este documento é vivo e deve ser atualizado automaticamente sempre que:
+- Uma nova feature for concluída → marcar com ✅ na seção 17
+- Uma nova feature for iniciada → adicionar com ( ) na seção 17
+- Uma nova tabela for criada no banco → documentar na seção 9
+- Uma nova Edge Function for criada → documentar na seção 10.1
+- Uma nova rota for adicionada → documentar na seção 7
+- Uma nova página for criada → documentar na seção 7
+- Uma mudança arquitetural acontecer → atualizar a seção correspondente
+- A infraestrutura mudar → atualizar a seção 5.4
+- A versão do documento deve ser incrementada a cada atualização (1.0 → 1.1 → 1.2...)
+- A data deve ser atualizada para a data da última modificação
+
+O agente do Cursor deve atualizar este arquivo no mesmo commit de qualquer alteração relevante, nunca em commit separado posterior.
 
 ---
 
