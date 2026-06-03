@@ -5,6 +5,12 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+      <header className="absolute top-0 left-0 right-0 z-20 px-4 sm:px-6 py-4 sm:py-5">
+        <p className="font-poppins text-lg sm:text-xl md:text-2xl font-semibold text-white dark:text-white">
+          Olá, Frank! 👋
+        </p>
+      </header>
+
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -16,12 +22,12 @@ export default function Hero() {
 
       <div className="relative z-10 w-full h-full flex items-center justify-center px-4 sm:px-6 py-8">
         <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 max-w-5xl w-full text-center">
-          <div className="bg-white/95 backdrop-blur-sm p-3 rounded-2xl shadow-2xl">
+          <div className="bg-white rounded-2xl shadow-2xl w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center shrink-0">
             <img
               src="https://static.readdy.ai/image/a38a5c3741c640eadeac44aae6e6e520/1fe965cd45beaa7952fde5325686f609.png" 
               alt="Logo"
               loading="lazy"
-              className="h-12 mb-8"
+              className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
             />
           </div>
           

@@ -1,6 +1,6 @@
 # PRD - Frank (Product Requirements Document)
 
-**Versão:** 1.1  
+**Versão:** 1.2  
 **Data:** 03/06/2026  
 **Status:** Em produção (fases 1-6 concluídas, migração Vercel concluída)  
 **Plataforma:** Web SPA (Single Page Application)  
@@ -930,6 +930,7 @@ conhecimento-list
 ( ) On-premise deployment
 
 ### Novas Features (adicionadas durante o desenvolvimento)
+✅ Ajuste visual da logo (quadrado centralizado) e saudação no header da home
 ( ) [novas features serão listadas aqui conforme forem surgindo]
 
 ---
